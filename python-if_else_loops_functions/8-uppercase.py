@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
+    new_str = ""
     for c in str:
-        # Kiçik hərfləri böyük hərflərə çeviririk
         if ord('a') <= ord(c) <= ord('z'):
-            print("{}".format(chr(ord(c) - 32)), end="")
+            new_str += chr(ord(c) - 32)
         else:
-            print("{}".format(c), end="")
-    print()
+            new_str += c
+    print("{}".format(new_str))
