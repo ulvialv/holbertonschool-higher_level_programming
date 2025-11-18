@@ -1,0 +1,1 @@
+Isler ciddiye bindi dayiii
