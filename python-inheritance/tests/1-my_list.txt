@@ -1,10 +1,10 @@
-#!/usr/bin/python3
-"""Defines MyList class that inherits from list."""
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
 
-
-class MyList(list):
-    """Custom list class that prints a sorted version of itself."""
-
-    def print_sorted(self):
-        """Prints the list in ascending sorted order."""
-        print(sorted(self))
+print(my_list)
+my_list.print_sorted()
+print(my_list)
