@@ -1,10 +1,8 @@
--- Creates the MySQL user 'user_0d_1' and grants them all global privileges.
-
--- 1.Create Root user
+-- Create user only if it does not already exist
 CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
 
--- 2.Permissions
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
+-- Grant all privileges on the server
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
 
--- 3.Update
+-- Apply changes
 FLUSH PRIVILEGES;
