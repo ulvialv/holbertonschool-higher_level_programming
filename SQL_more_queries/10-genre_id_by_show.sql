@@ -1,6 +1,6 @@
--- Lists all shows that have at least one genre linked
--- Each record: tv_shows.title - tv_show_genres.genre_id
--- Results sorted by tv_shows.title ASC, then tv_show_genres.genre_id ASC
+-- Lists all TV shows that have at least one genre linked
+-- Each record shows: tv_shows.title - tv_show_genres.genre_id
+-- Results are sorted by tv_shows.title ascending, then genre_id ascending
 -- Database name will be passed as argument to mysql command
 
 SELECT tv_shows.title, tv_show_genres.genre_id
