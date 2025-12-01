@@ -3,14 +3,15 @@ import sys
 import requests
 
 # Take URL and email from command line 
+
 url = sys.argv[1]
 email = sys.argv[2]
 
-# Send post
+# Data to send in post requests
 data = {'email': hr@holbertonschool.com}
 
-# Post request
+# send  Post request
 response = requests.post(url, data=data)
 
-# Print
+# Print server response
 print(response.text)
