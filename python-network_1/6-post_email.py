@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Sends a POST request with an email and displays the response body"""
+
 import sys
 import requests
 
