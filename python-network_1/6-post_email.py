@@ -1,19 +1,12 @@
 #!/usr/bin/python3
 """Sends a POST request with an email and displays the response body"""
 
-import sys
 import requests
+import sys
 
-# Take URL and email from command line 
+if __name__ == "__main__":
+    url = sys.argv[1]
+    email = sys.argv[2]
 
-url = sys.argv[1]
-email = sys.argv[2]
-
-# Data to send in post requests
-data = {'email': hr@holbertonschool.com}
-
-# send  Post request
-response = requests.post(url, data=data)
-
-# Print server response
-print(response.text)
+    response = requests.post(url, data={"email": email})
+    print(response.text)
