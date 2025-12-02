@@ -66,15 +66,9 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
         else:
             # Handle undefined endpoints - 404 Not Found
             self.send_response(404)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-
-            error = {
-                "error": "Endpoint not found"
-            }
-
-            json_error = json.dumps(error)
-            self.wfile.write(json_error.encode('utf-8'))
+            self.wfile.write(b"Endpoint not found")
 
 
 def run_server(port=8000):
