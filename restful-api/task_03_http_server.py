@@ -52,7 +52,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
            
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler):
     """Start the API server on  port 8000."""
-    server = server_class(("0.0.0.0" 8000), handler_class)
+    server = server_class(("0.0.0.0", 8000), handler_class)
     print("Starting server on port 8000...")
     server.serve_forever()
 
